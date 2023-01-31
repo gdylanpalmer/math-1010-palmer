@@ -2,6 +2,15 @@
 
 # LONDON MULTIPLEX TRANSPORTATION NETWORK
 
+    coordinates = []
+    with open('london_transport_nodes.txt', 'r') as fd:
+        lines = fd.readlines()
+        for line in lines:
+            x = line.split(' ')[2]
+            y = line.split(' ')[3][:-1]
+            coords = tuple((float(x), float(y)))
+            coordinates.append(coords)
+
 I'm copying and pasting the below readme from the original dataset. I'm omitting parts that aren't relevant to your network. 
 
 Your metadata for this network is a list of station names. You can upload the station names by typing
